@@ -15,7 +15,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: 940px;
   margin: 0 auto;
   clear: both;
 }
@@ -57,11 +57,15 @@ h3 {
   position: fixed;
   z-index: 99;
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0;
+  top:0;
+  left: 0;
   overflow: auto;
   color: #fff;
   background: #fff;
   border-bottom: 2px solid #ccc;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 #logo {
@@ -76,6 +80,7 @@ h3 {
   text-align: center;
   text-decoration: none;
   background: #4aaaa5;
+  margin-left: 0;
 }
 
 nav {
@@ -85,7 +90,6 @@ nav {
 
 nav a {
   display: inline-block;
-  padding-left: 15px;
   margin-left: 15px;
   line-height: 18px;
   color: #999;
@@ -113,13 +117,15 @@ footer {
 /* sidebar */
 
 .sidebar {
-  float: right;
-  width: 100%;
-  max-width: 270px;
+/*  float: right;*/
+  width: 270px;
   padding: 30px;
   margin-bottom: 20px;
+  margin-left: 15px;
   background: #fff;
   border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: top;
 }
 
 h3,
@@ -148,17 +154,16 @@ h3,
 }
 
 .main-section {
-  float: left;
-  width: 100%;
-  max-width: 650px;
+  /*float: left;*/
+  width: 650px;
   padding: 30px;
   margin: 0 0 40px;
   background: #fff;
   border: 1px solid #ddd;
+  display: inline-block;
 }
 
 .about img{
-  float: left;
   margin: 5px;
 }
 
@@ -172,6 +177,7 @@ h3,
   width: 274px;
   margin: 20px 0 25px;
   overflow: auto;
+  max-width: 550px;
 }
 
 .work:nth-child(even) {
@@ -188,7 +194,6 @@ h3,
   position: absolute;
   bottom: 20px;
   width: 100%;
-  padding: 15px;
   margin-bottom: 0;
   font-weight: 300;
   line-height: 30px;
@@ -246,179 +251,206 @@ input[type=submit] {
   border: 0 none;
 }
 
-/*Media Query*/
 
-@media only screen and (max-width: 980px)  {
-  a#logo{
-    margin-left: 50px;
-  }
+/*optimization for 768px width*/
 
-  nav a{
-  float: left;
-  display: inline-block;
-  margin-left: 0;
-  padding-right: 45px;
-  font-size: 18px;
-  margin-top: 15px;
-  }
+@media screen and (max-width: 768px) {
 
-  #masthead {
-  position: static;
-  z-index: 99;
-  width: 980px;
-  max-width: 980px;
-  overflow: auto;
-  color: #fff;
-  background: #fff;
-  border-bottom: 2px solid #ccc;
-  padding-right: 0;
-  margin-bottom: 0;
-  right: 50px;
+#main-container{
+  padding-right: 20px;
+  padding-left: 20px;
 }
+
+header{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#logo{
+  margin-left: 20px;
+}
+
+nav{
+  margin-right: 25px;
+}
+
+/*  .container {
+      max-width: 768px;
+      margin-left: 20px;
+  }*/
 
   .main-section {
-  float: left;
-  width: 100%;
-  max-width: 600px;
-  padding: 30px;
-  margin: 0 45px 120px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-div#main-container.container{
-  padding-top: 50px;
-}
-
-.sidebar{
-  float: left;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 768px) {
-
-  a#logo{
-    margin-left: 30px;
+    /*float: left;*/
+    padding: 10px 10px;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block; 
   }
 
-  nav a{
+  .work img{
+    margin-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+  }
+
+  h3{
+    margin-left: 40px;
+    padding-right: 40px;
+  }
+
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  .box {
+    margin: 14px 10px 18px 60px;
+  }
+
+  .about img{
+  width: 400px;
   float: left;
-  display: inline-block;
-  margin-left: 0;
-  font-size: 16px;
-  padding: 0 -20px;
-  margin-top: 15px;
-}
+
+  }
 
 
-  #masthead {
-  position: static;
-  z-index: 99;
-  width: 768px;
-  margin: 0;
-  overflow: auto;
-  color: #fff;
-  background: #fff;
-  border-bottom: 2px solid #ccc;
-}
+  .sidebar{
+    display: block;
+    height: 210px;
+    margin: 10px auto;
+    width: 100%;
+   }
 
+  .link {
+    width: 80px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+  }
 
-  .main-section {
-  float: left;
-  width: 100%;
-  max-width: 420px;
-  padding: 30px;
-  margin: 0 25px 120px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-.work{
-  position: relative;
-  float: left;
-  width: 158px;
-  margin: 20px 0 25px;
-  overflow: auto;
-
-}
-
-.work h3 {
-  line-height: 0;
- }
-
-section.sidebar{
-  float: left;
-}
-
- 
+  input[type=text],
+  input [type=email],
+  textarea  {
+    width: 690px;
+    max-height: 200px
+  }
 }
 
 
 
+/*optimization for 640px width*/
+
+@media screen and (max-width: 640px) {
+
+  .main-section{
+    display: inline-block;
+    margin-top: 40px;
+  }
 
 
+  .container {
+      max-width: 640px;
+      margin: 0;
+  }
 
-@media only screen and (max-width: 640px) {
+  #logo{
+    width: 640px;
+    margin-left: 0;
+  }
 
+  nav {
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: #ffffff;
+    position: static;
+    width: 640px;
+  }
 
+  nav a {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 50px;
+    font-size: 15px;
+    position: static;
+    margin-left: 80px;
+  }
   
 
-nav a{
-  float: left;
-  display: inline-block;
-  font-size: 15px;
-
-}
-
-#masthead {
-  position: static;
-  z-index: 99;
-  width: 640px;
-  margin: 0 0 30px;
-  overflow: auto;
-  color: #fff;
-  background: #fff;
-  border-bottom: 2px solid #ccc;
-}
-
-
-.container {
-  width: 640px;
-  height: auto;
-  top: 0;
-  left: 0;
-  max-width: 640px;
-  margin: auto;
-  clear: both;
-}
-
-section.main-section{
-  margin: 0 15%;
+  .main-content {
+    max-width: 600px;
+    padding: 10px 10px; 
+    margin-top: 50px;
+    margin-left: 20px;
+  }
   
-}
+  #bio-image {
+    max-width: 500px;
+    margin: 18px 12px 15px 30px;
+  }
 
-section.sidebar{
-  margin: 5% 25%
-}
+  p {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin: 0px 17px;
+  }
 
-.work{
-  position: relative;
-  width: 154px;
-  overflow: auto;
-}
+  .work{
+    width: 550px;
+  }
+  .work h3{
+    width: 435px;
+    left: 40px;
+    right: 100px;
+    margin-left: 0;
+  }
 
-.work h3 {
-  line-height: 0;
- }
+  .work img{
+    margin-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+  }
+
+  h3{
+    width: 435px;
+    padding-right: 0;
+    right: 75px;
+    margin-left: 70px;
+    padding-left: 0;
+    left: -65;
+  }
+
+  .box {
+    margin: 10px 50px 20px 40px;
+  }
+  
+  .box, img {
+    max-width: 475px;
+  }
+
+  .box:nth-child(even) {
+    margin: 40px;
+  }
+
+  #sidebar {
+    width: 99%;
+    margin-right: 5px;
+    margin-bottom: 150px;
+  }
+
+  .link {
+    width: 80px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+  }
+
+  input[type=text],
+  input [type=email],
+  textarea  {
+    max-width: 100%;
+    max-height: 200px
+  }
 }
